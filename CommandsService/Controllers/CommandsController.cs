@@ -2,11 +2,15 @@
 
 namespace CommandsService.Controllers
 {
-    public class CommandsController : Controller
+    [Route("api/c/[controller]")]
+    [ApiController]
+    public class CommandsController : ControllerBase
     {
-        public IActionResult Index()
+        public CommandsController()
         {
-            return View();
+
         }
+
+        
     }
 }

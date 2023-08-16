@@ -2,7 +2,7 @@
 
 namespace CommandsService.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/c/[controller]")]
     [ApiController]
     public class PlatformsController : ControllerBase
     {
