@@ -21,7 +21,11 @@ namespace CommandsService.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<PlatformReadDto>> GetPlatforms()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Getting Platforms from CommandsService");
+
+            var platformItems = _repository.GetAllPlatforms();
+
+            return Ok(_mapper.Map<IEnumerable<PlatformReadDto>>(platformItems));
         }
 
         [HttpPost]
